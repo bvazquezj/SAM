@@ -1,31 +1,41 @@
 import { useState } from "react";
 
 const recommendations = {
-  alegría: [
-    'Comparte historias inspiradoras.',
-    'Haz preguntas divertidas a tu audiencia.',
-    'Crea retos divertidos para participar.',
+  "alegría": [
+    "Publica contenido que resalte momentos positivos.",
+    "Celebra los logros de tu audiencia.",
+    "Usa colores brillantes y música alegre.",
+    "Comparte historias inspiradoras.",
+    "Haz preguntas divertidas a tu audiencia.",
+    "Crea retos divertidos para participar."
   ],
-  tristeza: [
-    'Comparte experiencias personales.',
-    'Aborda temas que generen empatía.',
-    'Publica reflexiones profundas.',
+  "tristeza": [
+    "Comparte historias personales o testimonios.",
+    "Genera empatía con experiencias emocionales.",
+    "Usa tonos más oscuros o suaves y música lenta.",
+    "Aborda temas que generen empatía.",
+    "Publica reflexiones profundas."
   ],
-  sarcasmo: [
-    'Utiliza humor irónico en tus publicaciones.',
-    'Emplea memes divertidos.',
-    'Crea parodias de situaciones actuales.',
+  "sarcasmo": [
+    "Usa humor irónico en temas actuales.",
+    "Haz referencia a exageraciones para generar comicidad.",
+    "Publica memes divertidos o GIFs graciosos.",
+    "Crea parodias de situaciones actuales."
   ],
-  enojo: [
-    'Aborda problemas sociales controvertidos.',
-    'Invita a tu comunidad a compartir su opinión.',
-    'Expresa tu postura de manera clara.',
+  "enojo": [
+    "Toca temas controversiales o problemáticos.",
+    "Motiva a tu comunidad a expresar su opinión.",
+    "Inspira a tu audiencia a tomar acción ante injusticias.",
+    "Aborda problemas sociales controvertidos.",
+    "Expresa tu postura de manera clara."
   ],
-  sorpresa: [
-    'Comparte datos curiosos o hechos sorprendentes.',
-    'Crea expectativa antes de un anuncio.',
-    'Invita a participar en juegos de sorpresa.',
-  ],
+  "sorpresa": [
+    "Revela datos o hechos inesperados.",
+    "Genera expectativa antes de un gran anuncio.",
+    "Usa teasers o adelantos para mantener el interés.",
+    "Invita a participar en juegos o concursos sorpresa.",
+    "Comparte datos curiosos o hechos sorprendentes."
+  ]
 };
 
 const EmotionRecommendations = () => {
@@ -36,15 +46,14 @@ const EmotionRecommendations = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className=" w-3/5 bg-gray-100 flex flex-col items-center justify-center p-4">
       <h1 className="text-2xl font-bold mb-4">Emociones</h1>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-5 gap-4">
         {Object.keys(recommendations).map((emotion) => (
           <button
             key={emotion}
             onClick={() => handleEmotionClick(emotion)}
-            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
-          >
+            className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
             {emotion.charAt(0).toUpperCase() + emotion.slice(1)}
           </button>
         ))}

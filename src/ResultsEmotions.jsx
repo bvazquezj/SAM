@@ -28,7 +28,7 @@ export default function EmotionDisplay({ result }) {
                             {emotionData.emotion}
                         </h3>
                         <p className="text-gray-500 mt-2 text-lg">
-                            Posicion: {index + 1}
+                            Posicion: {emotionData.count *10} %
                         </p>
                     </div>
                 ))}

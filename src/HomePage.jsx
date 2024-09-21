@@ -32,7 +32,7 @@ export default function HomePage() {
             return;
         }
         console.log(videoId);
-        const url = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${apiKey}&maxResults=10`;
+        const url = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${apiKey}&maxResults=11`;
 
         try {
             const response = await fetch(url);
@@ -89,11 +89,13 @@ export default function HomePage() {
 
             <main className="w-[80dvw] h-[75dvh] flex flex-col justify-between items-center">
                 <section className="w-[80dvw] h-[75dvh] flex flex-row justify-between items-center">
-                    <div className="w-full flex justify-center items-center p-10 gap-4">
+                    <div className="w-full flex flex-col items-center justify-center p-10 gap-4">
+                        <label className="text-zinc-700 text-sm text-left w-2/3 " htmlFor=""> Ingresa el link de un video de YouTube:</label>
                         <input onChange={handleInputChange} placeholder="https://www.youtube.com/watch?v=7M2kFOzax0w&ab_channel=BandaiNamcoEntertainmentAmerica" type="text" className="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5" />
-                        <button onClick={fetchComments} className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                        <button onClick={fetchComments} className="w-48 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-7 py-3 text-center me-2 mb-2">
                             Enviar
                         </button>
+
                     </div>
                 </section>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -105,10 +107,7 @@ export default function HomePage() {
                 </section>
             </main>
 
-            <footer className="h-[30vh] w-full mt-4 bg-gray-300 flex flex-row justify-start items-center px-[10%]">
-                <img className="size-36 rounded-full" src="/SAM-logo.webp" alt="Imagen del logo SAM" />
-                <h1 className="text-xl font-bold">SAM</h1>
-            </footer>
+            
         </>
     )
 }
