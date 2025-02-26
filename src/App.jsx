@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
-import { MainReg } from './Register/MainReg';
-import { MainLog } from './logIn/MainLog';
-import landinPage from './LandinPage';
+import { MainReg } from './Register/MainReg.jsx';
+import { MainLog } from './logIn/MainLog.jsx';
+import landinPage from './LandinPage.jsx';
 
 function App() {
 
