@@ -7,11 +7,11 @@ export default function Header() {
         </div>
 
         <nav className="flex justify-center gap-4 text-md font-bold">
-            <a href="/" className="hover:text-zinc-700 hover:underline cursor-pointer ">Inicio</a>
-            <a href="/contact" className="hover:text-zinc-700 hover:underline cursor-pointer">Contacto</a>
-            <a href="/info" className="hover:text-zinc-700 hover:underline cursor-pointer">Información</a>
-            <a href="/Register.html" className="hover:text-zinc-700 hover:underline cursor-pointer">Register</a>
-            <a href="/Login.html" className="hover:text-zinc-700 hover:underline cursor-pointer">Log In</a>
+            <link to="/" className="hover:text-zinc-700 hover:underline cursor-pointer ">Inicio</link>
+            <link to="/contact" className="hover:text-zinc-700 hover:underline cursor-pointer">Contacto</link>
+            <link to="/info" className="hover:text-zinc-700 hover:underline cursor-pointer">Información</link>
+            <link to="/Register.html" className="hover:text-zinc-700 hover:underline cursor-pointer">Register</link>
+            <link to="/Login.html" className="hover:text-zinc-700 hover:underline cursor-pointer">Log In</link>
         </nav>
     </header>
     );
