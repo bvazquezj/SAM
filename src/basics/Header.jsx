@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Header() {
     return(
         <header className="w-[80dvw] flex flex-row justify-between items-center border-b border-black">
@@ -7,11 +9,11 @@ export default function Header() {
         </div>
 
         <nav className="flex justify-center gap-4 text-md font-bold">
-            <link to="/" className="hover:text-zinc-700 hover:underline cursor-pointer ">Inicio</link>
-            <link to="/contact" className="hover:text-zinc-700 hover:underline cursor-pointer">Contacto</link>
-            <link to="/info" className="hover:text-zinc-700 hover:underline cursor-pointer">Información</link>
-            <link to="/Register.html" className="hover:text-zinc-700 hover:underline cursor-pointer">Register</link>
-            <link to="/Login.html" className="hover:text-zinc-700 hover:underline cursor-pointer">Log In</link>
+            <Link to="/LandinPage" className="hover:text-zinc-700 hover:underline cursor-pointer">Inicio</Link>
+            <Link to="/contact" className="hover:text-zinc-700 hover:underline cursor-pointer">Contacto</Link>
+            <Link to="/info" className="hover:text-zinc-700 hover:underline cursor-pointer">Información</Link>
+            <Link to="/Register" className="hover:text-zinc-700 hover:underline cursor-pointer">Register</Link>
+            <Link to="/Login" className="hover:text-zinc-700 hover:underline cursor-pointer">Log In</Link>
         </nav>
     </header>
     );
